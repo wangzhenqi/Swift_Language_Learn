@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HUD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEc-R1-pKt">
+                                <rect key="frame" x="200" y="136" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0in-ER-YpM"/>
+                                    <constraint firstAttribute="height" constant="200" id="yEy-Ob-jcd"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5gy-Qm-mDB" appends="YES" id="G6f-DH-8Th"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re3-4Q-zG5">
+                                <rect key="frame" x="277" y="98" width="47" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vd9-eh-ljb"/>
+                                    <constraint firstAttribute="width" constant="47" id="jIT-tj-gct"/>
+                                </constraints>
+                                <state key="normal" title="PopUp"/>
+                                <connections>
+                                    <action selector="popUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUz-q3-JsY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="re3-4Q-zG5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="AKS-ic-zyp"/>
+                            <constraint firstItem="KEc-R1-pKt" firstAttribute="top" secondItem="re3-4Q-zG5" secondAttribute="bottom" constant="30" id="dRt-g9-mNM"/>
+                            <constraint firstItem="KEc-R1-pKt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="joH-Jd-u0c"/>
+                            <constraint firstItem="re3-4Q-zG5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6C-vj-mQa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivHeader" destination="KEc-R1-pKt" id="WZd-P9-7GL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="5gy-Qm-mDB">
+                    <connections>
+                        <action selector="onPan:" destination="BYZ-38-t0r" id="AVz-xS-yn9"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
